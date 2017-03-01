@@ -76,7 +76,7 @@ io.on('connection', function(client) {
 });
 
 
-http.listen(CHAT_PORT, function(){
+http.listen(process.env.PORT|| CHAT_PORT, function(){
     console.log('Listening on port ' + CHAT_PORT);
     console.log(http.address());
 });
