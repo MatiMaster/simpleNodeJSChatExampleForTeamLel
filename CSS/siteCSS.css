@@ -33,6 +33,7 @@
 }
 
 .sendButton{
+
     position: relative;
     width: 36px;
     height: 30px;
@@ -40,7 +41,7 @@
     font-size: 10px;
 }
 
-.sendButton{
+.sendUsernameButton{
     position: relative;
     width: 45px;
     height: 25px;
