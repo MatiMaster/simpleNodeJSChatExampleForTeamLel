@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="/CSS/siteCSS.css" />
+<script src="/socket.io/socket.io.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous">
+</script>
+
+
+
+
+<head>
+    <title>Chat Example</title>
+
+    <div>
+        <textarea name="chatHistory" id="chatHistory" readonly="readonly" class="chatHistory"></textarea>
+        <div class="sendGroupDiv">
+            <input type="text" name="chatInput" id="chatInput" class="chatInput" />
+            <button class="sendButton" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        var socket = io('/Chat');
+        socket.on('connected', function (data) {
+            console.log('You`ve succesfully connected ' + data.userName);
+        });
+        socket.on('messageReceive', function(data){
+            receiveMessage(data.sender, data.msg);
+        });
+        socket.on('someoneConnected', function(data){
+            console.log(data.userName + " Connected");
+            receiveMessage(data.userName, '******CONNECTED******');
+        });
+
+        function sendMessage(){
+            //handle message sending
+            var msg = document.getElementById('chatInput').value;
+            if(msg.length > 0){
+                socket.emit('sendMessage', {theMsg: msg});
+                document.getElementById('chatInput').value = "";
+            }
+        }
+
+        function receiveMessage(username,message){
+            //just parses the received message
+            var chatHistory = document.getElementById('chatHistory');
+            chatHistory.value = chatHistory.value + "\n" + username + ': ' + message;
+
+        }
+
+
+    </script>
+
+</head>
+
+
+</html>
