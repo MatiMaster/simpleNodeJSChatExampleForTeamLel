@@ -1,0 +1,24 @@
+{
+  "name": "chat-sample-MTM",
+  "version": "1.0.0",
+  "description": "",
+  "main": "backEnd.js",
+  "scripts": {
+	"start": "node backEnd.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["chat",
+    "matias",
+    "matimaster"
+  ],
+  "author": "Matias Iribarren",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "node-uuid": "^1.4.7",
+    "socket.io": "^1.5.1"
+  },
+    "engines": {
+    "node": "4.5.0"
+  }
+}
