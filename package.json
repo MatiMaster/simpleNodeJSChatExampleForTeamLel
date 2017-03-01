@@ -26,4 +26,7 @@
     "node-uuid": "^1.4.7",
     "socket.io": "^1.7.3"
   }
+    "engines": {
+    "node": "4.5.0"
+  }
 }
