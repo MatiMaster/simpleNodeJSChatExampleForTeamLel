@@ -1,33 +1,29 @@
 {
-  "name": "chatsample",
+  "name": "messengerex",
   "version": "1.0.0",
-  "description": "Just a simple chat messenger or w.e",
+  "description": "just a sample",
   "main": "backEnd.js",
   "scripts": {
-    "start": "node backEnd.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "chat",
-    "matias",
-    "matimaster"
-  ],
-  "author": "Matias Iribarren",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.14.0",
-    "node-uuid": "^1.4.7",
-    "socket.io": "^1.5.1"
-  },
-  "engines": {
-    "node": "4.5.0"
+    "test": "node backEnd.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MatiMaster/simpleNodeJSChatExampleForTeamLel.git"
   },
+  "keywords": [
+    "test"
+  ],
+  "author": "Matias Iribarren",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/MatiMaster/simpleNodeJSChatExampleForTeamLel/issues"
   },
-  "homepage": "https://github.com/MatiMaster/simpleNodeJSChatExampleForTeamLel#readme"
+  "homepage": "https://github.com/MatiMaster/simpleNodeJSChatExampleForTeamLel#readme",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "http": "0.0.0",
+    "node-uuid": "^1.4.7",
+    "socket.io": "^1.7.3"
+  }
 }
