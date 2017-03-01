@@ -1,13 +1,14 @@
 {
-  "name": "chat-sample-MTM",
+  "name": "chatsample",
   "version": "1.0.0",
-  "description": "",
+  "description": "Just a simple chat messenger or w.e",
   "main": "backEnd.js",
   "scripts": {
-	"start": "node backEnd.js",
+    "start": "node backEnd.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["chat",
+  "keywords": [
+    "chat",
     "matias",
     "matimaster"
   ],
@@ -18,7 +19,15 @@
     "node-uuid": "^1.4.7",
     "socket.io": "^1.5.1"
   },
-    "engines": {
+  "engines": {
     "node": "4.5.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatiMaster/simpleNodeJSChatExampleForTeamLel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MatiMaster/simpleNodeJSChatExampleForTeamLel/issues"
+  },
+  "homepage": "https://github.com/MatiMaster/simpleNodeJSChatExampleForTeamLel#readme"
 }
